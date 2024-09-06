@@ -2,6 +2,7 @@ package com.example.calculadora
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         var segundoNumero: TextInputEditText = findViewById(R.id.editSegundoNum)
         var btnSomar:Button=findViewById(R.id.btnSomar)
         var textResultado:TextView = findViewById(R.id.txtResultado)
+        var imageCalc:ImageView = findViewById(R.id.imageCalc)
 
 
 
@@ -27,7 +29,10 @@ class MainActivity : AppCompatActivity() {
 
 
             textResultado.setText("Resultado da soma: ${resultado}")
+        }
 
+        imageCalc.setOnClickListener {
+            textResultado.setText("Imagem Clicada")
         }
     }
 }
